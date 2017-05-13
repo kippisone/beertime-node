@@ -42,18 +42,18 @@ describe('BeerTime', () => {
         inspect(beertime.toString()).isEql(`${t}:00:00tb`);
       });
 
-      inspect.getRange(0, 59).forEach(m => {
+      inspect.getRange(0, process.env.TEST_ALL ? 59 : 3).forEach(m => {
         it(`returns a beertime string for ${t} hour${t>1?'s':''} and ${('0' + m).substr(-2)} minutes to beer`, () => {
           const beertime = new BeerTime(1494684000000 - (t * 60 * 60 * 1000) + (m * 60 * 1000));
           inspect(beertime.toString()).isEql(`${t}:${('0' + m).substr(-2)}:00tb`);
         });
 
-        // inspect.getRange(0, 59).forEach(s => {
-        //   it(`returns a beertime string for ${t} hour${t>1?'s':''} and ${('0' + m).substr(-2)} minutes and ${('0' + s).substr(-2)} seconds to beer`, () => {
-        //     const beertime = new BeerTime(1494684000000 - (t * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000));
-        //     inspect(beertime.toString()).isEql(`${t}:${('0' + m).substr(-2)}:${('0' + s).substr(-2)}tb`);
-        //   });
-        // });
+        inspect.getRange(0, process.env.TEST_ALL ? 59 : 3).forEach(s => {
+          it(`returns a beertime string for ${t} hour${t>1?'s':''} and ${('0' + m).substr(-2)} minutes and ${('0' + s).substr(-2)} seconds to beer`, () => {
+            const beertime = new BeerTime(1494684000000 - (t * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000));
+            inspect(beertime.toString()).isEql(`${t}:${('0' + m).substr(-2)}:${('0' + s).substr(-2)}tb`);
+          });
+        });
       });
     });
 
@@ -63,18 +63,18 @@ describe('BeerTime', () => {
         inspect(beertime.toString()).isEql(`${t}:00:00bt`);
       });
 
-      inspect.getRange(0, 59).forEach(m => {
+      inspect.getRange(0, process.env.TEST_ALL ? 59 : 3).forEach(m => {
         it(`returns a beertime string for ${t} hour${t>1?'s':''} and ${('0' + m).substr(-2)} minutes to beer`, () => {
           const beertime = new BeerTime(1494684000000 + (t * 60 * 60 * 1000) + (m * 60 * 1000));
           inspect(beertime.toString()).isEql(`${t}:${('0' + m).substr(-2)}:00bt`);
         });
 
-        // inspect.getRange(0, 59).forEach(s => {
-        //   it(`returns a beertime string for ${t} hour${t>1?'s':''} and ${('0' + m).substr(-2)} minutes and ${('0' + s).substr(-2)} seconds to beer`, () => {
-        //     const beertime = new BeerTime(1494684000000 + (t * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000));
-        //     inspect(beertime.toString()).isEql(`${t}:${('0' + m).substr(-2)}:${('0' + s).substr(-2)}bt`);
-        //   });
-        // });
+        inspect.getRange(0, process.env.TEST_ALL ? 59 : 3).forEach(s => {
+          it(`returns a beertime string for ${t} hour${t>1?'s':''} and ${('0' + m).substr(-2)} minutes and ${('0' + s).substr(-2)} seconds to beer`, () => {
+            const beertime = new BeerTime(1494684000000 + (t * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000));
+            inspect(beertime.toString()).isEql(`${t}:${('0' + m).substr(-2)}:${('0' + s).substr(-2)}bt`);
+          });
+        });
       });
     });
   });

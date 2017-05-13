@@ -6,7 +6,8 @@
   "author": "Andi Heinkelein <andifeind@noname-media.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --reporter lagoon-reporter --recursive test/"
+    "test": "mocha --reporter lagoon-reporter --recursive test/",
+    "test:all": "TEST_ALL=1 mocha --reporter lagoon-reporter --recursive test/"
   },
   "repository": {
     "type": "git",
