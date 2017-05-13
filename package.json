@@ -1,0 +1,30 @@
+{
+  "name": "beertime",
+  "version": "0.0.0",
+  "description": "Bavarian Beer Time module for node.js",
+  "main": "lib/beertime.js",
+  "author": "Andi Heinkelein <andifeind@noname-media.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --reporter lagoon-reporter --recursive test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Andifeind/beertime-node.git"
+  },
+  "keywords": [
+    "beertime",
+    "bavarianbeertime",
+    "time",
+    "date"
+  ],
+  "bugs": {
+    "url": "https://github.com/Andifeind/beertime-node/issues"
+  },
+  "homepage": "https://github.com/Andifeind/beertime-node#readme",
+  "devDependencies": {
+    "inspect.js": "^1.4.0",
+    "lagoon-reporter": "^0.3.4",
+    "mocha": "^3.3.0"
+  }
+}
