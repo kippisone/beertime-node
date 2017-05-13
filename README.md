@@ -1,6 +1,8 @@
 BeerTime
 ========
 
+[![Build Status](https://travis-ci.org/Andifeind/beertime-node.svg?branch=master)](https://travis-ci.org/Andifeind/beertime-node)
+
 BeerTime module for Node.js to deal with Bavarian Beer Time.
 
 Usage
