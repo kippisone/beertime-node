@@ -1,6 +1,6 @@
 {
   "name": "beertime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bavarian Beer Time module for node.js",
   "main": "lib/beertime.js",
   "author": "Andi Heinkelein <andifeind@noname-media.com>",
